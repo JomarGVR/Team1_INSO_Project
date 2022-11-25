@@ -1,0 +1,174 @@
+body {
+  height: 100hv;
+  width: 100%;
+  background: linear-gradient(
+    to right, 
+    white 0%,
+    white 50%,
+    rgba(34, 132, 0, 0.62) 40%,
+    rgba(34, 132, 0, 0.62) 40%
+  );
+  /* Rectangle 1 */
+
+
+
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header{
+  height: 100vh;
+  width: 90%;
+  padding: 0 8%;
+  top: 0; 
+  left: 0;
+  
+  position: sticky;
+}
+
+.logo{
+  width: 150px;
+}
+
+.nav-links{
+  padding: 28px 0;
+}
+
+.nav-links li{
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.nav-links li a{
+  
+  text-decoration: none;
+  font-family: 'Inter';
+  font-style: italic;
+  font-size: 33px;
+  color: black;
+  padding: 5px 0; 
+  font-weight: 800;
+  line-height: 48px;
+}
+
+
+.button{
+  
+position: absolute;
+width: 200px;
+height: 84px;
+left: 969px;
+top: 605px;
+
+background: #000000;
+opacity: 0.3;
+border-radius: 30px;
+}
+
+.projectText{
+  position: absolute;
+  width: 720px;
+  height: 467px;
+  left: 700px;
+  top: 302px;
+  
+
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 58px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.picture{
+
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  left: 219px;
+  top: 205px;
+  border-radius: 50%;
+}
+
+.userStory{
+ position: absolute;
+  width: 500px;
+  height: 450px;
+  left: 90px;
+  top: 465px;
+
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+
+  color: #000000;
+  
+  
+  
+}
+
+.proposal{
+
+  position: absolute;
+  width: 900px;
+  height: 250px;
+  left: 250px;
+  top: 900px;
+
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: center;
+
+  color: #000000;
+  
+}
+
+.button2{
+  
+position: absolute;
+width: 200px;
+height: 84px;
+left: 360px;
+top: 600px;
+
+background: #000000;
+opacity: 0.3;
+border-radius: 30px;
+}
+
+/* Add style to button */
+#theme-button {
+position: absolute;
+width: 200px;
+height: 84px;
+left: 360px;
+top: 600px;
+
+font-family: 'Inter';
+font-style: italic;
+text-align: center;
+
+background: #000000;
+
+border-radius: 30px;
+}
+
+
+/* Customize Dark Mode Theme */
+.dark-mode {
+background-color: yellow;
+color: white;
+
+}
