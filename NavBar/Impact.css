@@ -1,8 +1,8 @@
 body {
-  height: 100hv;
+  height: 500hv;
   width: 100%;
   background: linear-gradient(
-    to bottom, 
+    to right, 
     white 0%,
     white 50%,
     rgba(34, 132, 0, 0.62) 40%,
@@ -52,4 +52,55 @@ nav{
   padding: 5px 0; 
   font-weight: 800;
   line-height: 48px;
+}
+
+.quote{
+  position: absolute; 
+  top: 200px; 
+  left: 120px;
+  width: 550px;
+}
+
+.image1{
+  position: absolute;
+  left: 120px;
+  top: 500px; 
+  width: 550px; 
+}
+
+.image2{
+  position: absolute;
+  left: 120px;
+  top: 1100px; 
+  width: 550px; 
+}
+
+.image3{
+  position: absolute;
+  left: 120px;
+  top: 1800px; 
+  width: 550px; 
+}
+
+.image4{
+  position: absolute;
+  left: 120px;
+  top: 2500px; 
+  width: 550px; 
+}
+
+.paragraph{
+  position: absolute;
+  left: 825px;
+  top: 550px; 
+   
+
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 500px;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+
+  color: #000000;
 }
