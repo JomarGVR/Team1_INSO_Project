@@ -1,0 +1,23 @@
+{
+  "name": "simulation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JomarGVR/Team1_INSO_Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JomarGVR/Team1_INSO_Project/issues"
+  },
+  "homepage": "https://github.com/JomarGVR/Team1_INSO_Project#readme",
+  "dependencies": {
+    "firebase": "^9.14.0"
+  }
+}
