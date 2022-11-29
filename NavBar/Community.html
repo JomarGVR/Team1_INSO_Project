@@ -31,11 +31,12 @@
 
     <div class="top-bar">
         <h1>
-            My Forum
+         OEG Forum   
         </h1>
     </div>
     <div class="main">
         <ol>
+          
         </ol>
     </div>
     <script src="data.js"></script>
@@ -45,7 +46,7 @@
         for (let thread of threads) {
             var html = `
             <li class="row">
-                <a href="/thread.html?${thread.id}">
+                <a href="Thread.html?${thread.id}">
                     <h4 class="title">
                         ${thread.title}
                     </h4>
@@ -66,19 +67,30 @@
     <style>
         body {
             margin: 10px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            height: 100vh;
+            background-color: #f1f1f1;
         }
         a {
             text-decoration: none;
             color: black;
         }
-        h1, h4, ol {
+      h1{
+        margin: 0;
+        color: white
+      }
+        h4, ol {
             margin: 0;
+            color: black;
         }
         p {
             margin: 5px 0;
         }
         .top-bar {
-            background-color: skyblue;
+            background-color: darkgreen;
             padding: 0 40px;
         }
         .main {

@@ -25,17 +25,16 @@
         <li><a href="About.html">About</a> </li>
 
       </ul>
-
+      
 
     </nav>
-
-    <div class="top-bar">
+  <div class="top-bar">
         <h1>
             My Forum
         </h1>
     </div>
     <div class="main">
-        <div class="header">
+        <div class="heade">
         </div>
         <textarea></textarea>
         <button>add comment</button>
@@ -46,17 +45,17 @@
     <script>
         var id = window.location.search.slice(1);
         var thread = threads.find(t => t.id == id);
-        var header = document.querySelector('.header');
+        var header = document.querySelector('.heade');
         var headerHtml = `
             <h4 class="title">
-                ${thread.title}
+                ${Thread.title}
             </h4>
             <div class="bottom">
                 <p class="timestamp">
-                    ${new Date(thread.date).toLocaleString()}
+                    ${new Date(Thread.date).toLocaleString()}
                 </p>
                 <p class="comment-count">
-                    ${thread.comments.length} comments
+                    ${Thread.comments.length} comments
                 </p>
             </div>
         `
@@ -108,7 +107,11 @@
             text-decoration: none;
             color: black;
         }
-        h1, h4, ol {
+      h1{
+        margin: 0;
+        color:white;
+      }
+        h4, ol {
             margin: 0;
         }
         p {
@@ -123,7 +126,7 @@
             margin: 10px 0;
         }
         .top-bar {
-            background-color: skyblue;
+            background-color: darkgreen;
             padding: 0 40px;
         }
         .main {
@@ -151,14 +154,12 @@
             padding-left: 10px;
         }
     </style>
-    
-
-    
-  </div>
+  
   
 
   <script src="script.js"></script>
-
+  </div>
+  
   
 </body>
 
