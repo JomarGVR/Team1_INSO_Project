@@ -1,0 +1,110 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="authentication.css">
+</head>
+
+<body>
+  
+<div id="login-box">
+  <div class="left">
+    <h1 id='status'>Log In</h1>
+    
+    
+    <input type="text" id="email" name="email" placeholder="E-mail" />
+    <input type="password" id="password" name="password" placeholder="Password" />
+    
+    <input type="submit" id='login' name="login" value="Login" />
+
+  </div>
+  
+  <div class="right">
+    <span class="loginwith">Sign in with<br />social network</span>
+    
+    <button class="social-signin facebook">Log in with facebook</button>
+    <button class="social-signin twitter">Log in with Twitter</button>
+    <button class="social-signin google">Log in with Google+</button>
+  </div>
+  <div class="or">OR</div>
+</div>
+</body>
+
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+  import { getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCT_lnB5lB8ktFDfWVO3E_0xeBi_LrxZ1Q",
+    authDomain: "team1inso.firebaseapp.com",
+    databaseURL: "https://team1inso-default-rtdb.firebaseio.com",
+    projectId: "team1inso",
+    storageBucket: "team1inso.appspot.com",
+    messagingSenderId: "1010067822108",
+    appId: "1:1010067822108:web:6b06e8b7bafa4751af31d9",
+    measurementId: "G-CTLG81F66L"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const database = getDatabase(app);
+  const auth = getAuth();
+
+  login.addEventListener('click',(e)=>{
+
+   var email = document.getElementById('email').value;
+   var password = document.getElementById('password').value;
+   
+
+    
+  signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+
+    const dt = new Date();
+
+    update(ref(database, 'users/' + user.uid),{
+          last_login: dt,
+          
+      })
+
+    if(user) {
+    window.location = '/index.html'; //After successful login, user will be redirected to home.html
+  }
+
+    
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    alert(errorMessage);
+  });
+   
+  
+
+    
+  });
+
+
+
+
+    
+
+
+    
+});
+</script>
+
+
+</html>
